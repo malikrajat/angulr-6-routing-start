@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        [routerLink]="['/servers', 10, 'edit']"
+        [queryParams]="{allowEdit: 1}"
+        fragment="loading"
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+
+    <!--when we convert to child routing -->
+    <router-outlet></router-outlet>
+
+    <!--when all routing is at parent level-->
+    <!--<app-edit-server></app-edit-server>-->
+    <!--<hr>-->
+    <!--<app-server></app-server>-->
+  </div>
+</div>
+
